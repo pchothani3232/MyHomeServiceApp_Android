@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".HomeRepair">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:padding="17dp"
+        android:text="Home Repairs"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which service do you need?"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/service_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="42dp">
+
+        <!-- Plumbing Services -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/service_border"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/plumbing_service_icon"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plumbing\nServices"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: "
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/professional_blue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$25"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_green_dark"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginLeft="60dp"
+                android:id="@+id/decrease_salon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="-"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/salon_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:id="@+id/increase_salon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="+"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <!-- Electrical Work -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/service_border"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/electrical_service_icon"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Electrical\nWork"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: "
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/professional_blue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$30"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_green_dark"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginLeft="60dp"
+                android:id="@+id/decrease_therapy"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="-"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/therapy_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:id="@+id/increase_therapy"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="+"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <!-- Carpenter Services -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/service_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/carpenter_service_icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carpenter\nServices"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: "
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/professional_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$35"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/holo_green_dark"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginLeft="60dp"
+                android:id="@+id/decrease_pet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="-"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/pet_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/increase_pet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="+"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <!-- Painting and Wall Fixing -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/service_border"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/painting_wallpaper"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Painting and\nWall Fixing"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: "
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/professional_blue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$40"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_green_dark"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:id="@+id/decrease_yoga"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+                android:text="-"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/yoga_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:layout_marginLeft="10px"
+                android:id="@+id/increase_yoga"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+                android:text="+"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <!-- Next Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp">
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: $0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"/>
+
+            <Button
+                android:layout_marginTop="80dp"
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_background"
+                android:padding="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
